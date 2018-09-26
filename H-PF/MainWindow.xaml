@@ -6,10 +6,9 @@
         xmlns:local="clr-namespace:H_PF"
         xmlns:Test="clr-namespace:H_PF.Example.Test" x:Class="H_PF.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="Blue">
+        Title="MainWindow" Height="450" Width="800" >
     <Grid>
 
-        <Test:Test HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"/>
 
     </Grid>
 </Window>

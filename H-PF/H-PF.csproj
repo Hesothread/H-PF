@@ -116,8 +116,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Example\Example_HesoControl\" />
+    <Folder Include="HesoControl\ChronoMeter\" />
     <Folder Include="HesoControl\DateTimePicker\" />
-    <Folder Include="HesoControl\NewFolder1\" />
+    <Folder Include="HesoControl\FTPExplorer\" />
+    <Folder Include="HesoControl\HTerminal\" />
+    <Folder Include="HesoControl\WatchTime\" />
     <Folder Include="HesoPatterns\HSingleton\" />
     <Folder Include="HesoPatterns\H\" />
   </ItemGroup>

@@ -9,7 +9,7 @@
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Button Click="Button_Click" Grid.Column="0"/>

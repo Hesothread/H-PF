@@ -19,7 +19,6 @@ namespace H_PF.Example.Test
             set
             {
                 _textMsg = value;
-                // Call OnPropertyChanged whenever the property is updated
                 OnPropertyChanged("TextMsg");
             }
         }

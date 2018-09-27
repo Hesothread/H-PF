@@ -4,11 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:H_PF"
-        xmlns:Test="clr-namespace:H_PF.Example.Test" x:Class="H_PF.MainWindow"
+        xmlns:NumberPicker="clr-namespace:H_PF.HesoControl.NumberPicker"  x:Class="H_PF.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" >
+        Title="NP" Height="800" Width="800" Background="gray">
     <Grid>
-
-
+        <NumberPicker:NumberPicker Height="80" Width="40"/>
     </Grid>
 </Window>

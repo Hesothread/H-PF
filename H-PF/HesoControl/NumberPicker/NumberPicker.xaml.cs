@@ -28,5 +28,15 @@ namespace H_PF.HesoControl.NumberPicker
             _context = new NumberPicker_DataContext();
             this.DataContext = _context;
         }
+
+        private void More_Click(object sender, RoutedEventArgs e)
+        {
+            _context.Number += 1;
+        }
+
+        private void Less_Click(object sender, RoutedEventArgs e)
+        {
+            _context.Number -= 1;
+        }
     }
 }

@@ -4,9 +4,20 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:H_PF.HesoControl.NumberPicker"
+             xmlns:convert="clr-namespace:H_PF.HesoConverter"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-    <Grid >
-        <Button />
+             d:DesignHeight="800" d:DesignWidth="400" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="white">
+    <UserControl.Resources>
+        <convert:ConverterIntToString x:Key="Converter1"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Content="+" Click="More_Click"/>
+        <TextBox Grid.Row="1" Text="{Binding Number, Converter={StaticResource Converter1}}" TextAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button Grid.Row="2" Content="-" Click="Less_Click"/>
     </Grid>
 </UserControl>

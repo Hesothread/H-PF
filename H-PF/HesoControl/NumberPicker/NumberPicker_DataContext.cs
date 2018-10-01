@@ -11,7 +11,7 @@ namespace H_PF.HesoControl.NumberPicker
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private int? _number = 42;
+        private int? _number;
 
         public int? Number
         {

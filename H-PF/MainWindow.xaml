@@ -6,8 +6,16 @@
         xmlns:local="clr-namespace:H_PF"
         xmlns:NumberPicker="clr-namespace:H_PF.HesoControl.NumberPicker"  x:Class="H_PF.MainWindow"
         mc:Ignorable="d"
-        Title="NP" Height="800" Width="800" Background="gray">
+        Title="NP" Height="800" Width="800" Background="DarkGray">
+    <Window.Resources>
+        <Style TargetType="NumberPicker:NumberPicker">
+            <Setter Property="ButtonForeground" Value="Red"/>
+            <Setter Property="ButtonBackground" Value="Black"/>
+            <Setter Property="CenterForeground" Value="Black"/>
+            <Setter Property="CenterBackground" Value="Red"/>
+        </Style>
+    </Window.Resources>
     <Grid>
-        <NumberPicker:NumberPicker Height="80" Width="40"/>
+        <NumberPicker:NumberPicker Height="240" Width="120"/>
     </Grid>
 </Window>

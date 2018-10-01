@@ -2,13 +2,23 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:H_PF.HesoControl.NumberPicker"
-             xmlns:convert="clr-namespace:H_PF.HesoConverter"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
-             d:DesignHeight="800" d:DesignWidth="400" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="white">
+             Name="NPUC"
+             d:DesignHeight="80" d:DesignWidth="40" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
     <UserControl.Resources>
-        <convert:ConverterIntToString x:Key="Converter1"/>
+        <Style x:Key="Button" TargetType="Button">
+            <Setter Property="Background" Value="{Binding ButtonBackground, ElementName=NPUC}"/>
+            <Setter Property="Foreground" Value="{Binding ButtonForeground, ElementName=NPUC}"/>
+            <Setter Property="BorderBrush" Value="{Binding ButtonBorderBrush, ElementName=NPUC}"/>
+        </Style>
+        <Style x:Key="Box" TargetType="TextBox">
+            <Setter Property="Background" Value="{Binding CenterBackground, ElementName=NPUC}"/>
+            <Setter Property="Foreground" Value="{Binding CenterForeground, ElementName=NPUC}"/>
+            <Setter Property="BorderBrush" Value="{Binding CenterBorderBrush, ElementName=NPUC}"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
     </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -16,8 +26,8 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Button Grid.Row="0" Content="+" Click="More_Click"/>
-        <TextBox Grid.Row="1" Text="{Binding Number, Converter={StaticResource Converter1}}" TextAlignment="Center" VerticalContentAlignment="Center"/>
-        <Button Grid.Row="2" Content="-" Click="Less_Click"/>
+        <Button Style="{StaticResource Button}" Grid.Row="0" Content="+" Click="More_Click"/>
+        <TextBox Style="{StaticResource Box}" Grid.Row="1" Text="{Binding Number}"/>
+        <Button Style="{StaticResource Button}" Grid.Row="2" Content="-" Click="Less_Click"/>
     </Grid>
 </UserControl>

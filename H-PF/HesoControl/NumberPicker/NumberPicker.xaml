@@ -11,11 +11,13 @@
             <Setter Property="Background" Value="{Binding ButtonBackground, ElementName=NPUC}"/>
             <Setter Property="Foreground" Value="{Binding ButtonForeground, ElementName=NPUC}"/>
             <Setter Property="BorderBrush" Value="{Binding ButtonBorderBrush, ElementName=NPUC}"/>
+            <Setter Property="BorderThickness" Value="{Binding ButtonBorderThickness, ElementName=NPUC}"/>
         </Style>
-        <Style x:Key="Box" TargetType="TextBox">
+        <Style x:Key="Center" TargetType="TextBox">
             <Setter Property="Background" Value="{Binding CenterBackground, ElementName=NPUC}"/>
             <Setter Property="Foreground" Value="{Binding CenterForeground, ElementName=NPUC}"/>
             <Setter Property="BorderBrush" Value="{Binding CenterBorderBrush, ElementName=NPUC}"/>
+            <Setter Property="BorderThickness" Value="{Binding CenterBorderThickness, ElementName=NPUC}"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
         </Style>
@@ -27,7 +29,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Button Style="{StaticResource Button}" Grid.Row="0" Content="+" Click="More_Click"/>
-        <TextBox Style="{StaticResource Box}" Grid.Row="1" Text="{Binding Number}"/>
+        <TextBox Style="{StaticResource Center}" Grid.Row="1" Text="{Binding Number}"/>
         <Button Style="{StaticResource Button}" Grid.Row="2" Content="-" Click="Less_Click"/>
     </Grid>
 </UserControl>

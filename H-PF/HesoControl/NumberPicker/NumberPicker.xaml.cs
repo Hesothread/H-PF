@@ -22,14 +22,18 @@ namespace H_PF.HesoControl.NumberPicker
     {
 
         // DependencyProperties
-        public static readonly DependencyProperty MinValueProperty = DependencyProperty.Register("MinValue", typeof(int), typeof(NumberPicker), new PropertyMetadata(0));
-        public static readonly DependencyProperty MaxValueProperty = DependencyProperty.Register("MaxValue", typeof(int), typeof(NumberPicker), new PropertyMetadata(2147483647));
-        public static readonly DependencyProperty CenterBackgroundProperty = DependencyProperty.Register("CenterBackground", typeof(Brush), typeof(NumberPicker), new PropertyMetadata(Brushes.White));
-        public static readonly DependencyProperty CenterForegroundProperty = DependencyProperty.Register("CenterForeground", typeof(Brush), typeof(NumberPicker), new PropertyMetadata(Brushes.Black));
-        public static readonly DependencyProperty CenterBorderBrushProperty = DependencyProperty.Register("CenterBorderBrush", typeof(Brush), typeof(NumberPicker), new PropertyMetadata(Brushes.LightGray));
-        public static readonly DependencyProperty ButtonBackgroundProperty = DependencyProperty.Register("ButtonBackground", typeof(Brush), typeof(NumberPicker), new PropertyMetadata(Brushes.LightGray));
-        public static readonly DependencyProperty ButtonForegroundProperty = DependencyProperty.Register("ButtonForeground", typeof(Brush), typeof(NumberPicker), new PropertyMetadata(Brushes.Black));
-        public static readonly DependencyProperty ButtonBorderBrushProperty = DependencyProperty.Register("ButtonBorderBrush", typeof(Brush), typeof(NumberPicker), new PropertyMetadata(Brushes.Gray));
+        private static DependencyProperty MinValueProperty = DependencyProperty.Register("MinValue", typeof(int), typeof(NumberPicker), new PropertyMetadata(0));
+        private static DependencyProperty MaxValueProperty = DependencyProperty.Register("MaxValue", typeof(int), typeof(NumberPicker), new PropertyMetadata(2147483647));
+
+        private static DependencyProperty CenterBackgroundProperty = DependencyProperty.Register("CenterBackground", typeof(Brush), typeof(NumberPicker), new PropertyMetadata(Brushes.White));
+        private static DependencyProperty CenterForegroundProperty = DependencyProperty.Register("CenterForeground", typeof(Brush), typeof(NumberPicker), new PropertyMetadata(Brushes.Black));
+        private static DependencyProperty CenterBorderBrushProperty = DependencyProperty.Register("CenterBorderBrush", typeof(Brush), typeof(NumberPicker), new PropertyMetadata(Brushes.LightGray));
+        private static DependencyProperty CenterBorderThicknessProperty = DependencyProperty.Register("CenterBorderThickness", typeof(Thickness), typeof(NumberPicker), new PropertyMetadata(new Thickness(1)));
+
+        private static DependencyProperty ButtonBackgroundProperty = DependencyProperty.Register("ButtonBackground", typeof(Brush), typeof(NumberPicker), new PropertyMetadata(Brushes.LightGray));
+        private static DependencyProperty ButtonForegroundProperty = DependencyProperty.Register("ButtonForeground", typeof(Brush), typeof(NumberPicker), new PropertyMetadata(Brushes.Black));
+        private static DependencyProperty ButtonBorderBrushProperty = DependencyProperty.Register("ButtonBorderBrush", typeof(Brush), typeof(NumberPicker), new PropertyMetadata(Brushes.Gray));
+        private static DependencyProperty ButtonBorderThicknessProperty = DependencyProperty.Register("ButtonBorderThickness", typeof(Thickness), typeof(NumberPicker), new PropertyMetadata(new Thickness(1)));
 
         public int MinValue
         {
@@ -56,6 +60,11 @@ namespace H_PF.HesoControl.NumberPicker
             get { return (Brush)GetValue(CenterBorderBrushProperty); }
             set { SetValue(CenterBorderBrushProperty, value); }
         }
+        public Thickness CenterBorderThickness
+        {
+            get { return (Thickness)GetValue(CenterBorderThicknessProperty); }
+            set { SetValue(CenterBorderThicknessProperty, value); }
+        }
         public Brush ButtonBackground
         {
             get { return (Brush)GetValue(ButtonBackgroundProperty); }
@@ -71,14 +80,18 @@ namespace H_PF.HesoControl.NumberPicker
             get { return (Brush)GetValue(ButtonBorderBrushProperty); }
             set { SetValue(ButtonBorderBrushProperty, value); }
         }
+        public Thickness ButtonBorderThickness
+        {
+            get { return (Thickness)GetValue(ButtonBorderThicknessProperty); }
+            set { SetValue(ButtonBorderThicknessProperty, value); }
+        }
 
-        private NumberPicker_DataContext _context;
+        private NumberPicker_DataContext _context = new NumberPicker_DataContext();
 
         public NumberPicker()
         {
             InitializeComponent();
-            _context = new NumberPicker_DataContext();
-            this.DataContext = _context;
+            DataContext = _context;
         }
 
         private void More_Click(object sender, RoutedEventArgs e)

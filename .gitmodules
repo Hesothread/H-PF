@@ -1,0 +1,6 @@
+[submodule "SubModule/MaterialDesign"]
+	path = SubModule/MaterialDesign
+	url = https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit.git
+[submodule "SubModule/ShowMeTheXAML"]
+	path = SubModule/ShowMeTheXAML
+	url = https://github.com/Keboo/ShowMeTheXAML.git

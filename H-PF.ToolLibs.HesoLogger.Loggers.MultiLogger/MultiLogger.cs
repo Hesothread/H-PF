@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace H_PF.ToolLibs.HesoLogger.Loggers
+namespace H_PF.ToolLibs.HesoLogger.Loggers.Multi
 {
-    public interface IHesoLogger
+    class MultiLogger
     {
-
     }
 }

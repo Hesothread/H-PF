@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace H_PF.ToolLibs.HesoLogger.LogFormatters
+namespace H_PF.ToolLibs.HesoLogger.Domaine.Models
 {
-    class ILogFormatter
+    public class HesoLogWarning
     {
     }
 }

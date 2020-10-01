@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>H_PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\H-PF.ToolLibs.HesoLogger.Logger\H-PF.ToolLibs.HesoLogger.Loggers.Logger.csproj" />
+  </ItemGroup>
+
+</Project>

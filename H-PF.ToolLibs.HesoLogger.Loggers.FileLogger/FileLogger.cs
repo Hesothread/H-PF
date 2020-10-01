@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace H_PF.ToolLibs.HesoLogger.Loggers.Implementation
+namespace H_PF.ToolLibs.HesoLogger.Loggers.File
 {
-    class ServiceLogger
+    class FileLogger
     {
     }
 }

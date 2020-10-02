@@ -43,7 +43,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HesoMail", "HesoMail", "{B9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAppMail", "WebAppMail", "{48BFC432-CF82-42BB-91DB-4517258CA7A5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hesos", "Hesos", "{AC1A664C-5B68-440F-A037-98C71F6254F4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HesoConfiguration", "HesoConfiguration", "{AC1A664C-5B68-440F-A037-98C71F6254F4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAppLogger", "WebAppLogger", "{C0EA63D0-FED3-44D0-BD2A-F047F79B27C1}"
 EndProject
@@ -62,7 +62,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HesoAppSettings", "HesoAppS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Loggers", "Loggers", "{F519DB7B-46F5-43B5-B192-2A1C75226001}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H-PF.ToolLibs.HesoLogger.Loggers.Logger", "H-PF.ToolLibs.HesoLogger.Logger\H-PF.ToolLibs.HesoLogger.Loggers.Logger.csproj", "{F3DB3198-4965-43E0-8F1D-4243E447CB07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "H-PF.ToolLibs.HesoLogger.Loggers.Logger", "H-PF.ToolLibs.HesoLogger.Logger\H-PF.ToolLibs.HesoLogger.Loggers.Logger.csproj", "{F3DB3198-4965-43E0-8F1D-4243E447CB07}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleLogger", "ConsoleLogger", "{5C33FE3E-FE40-49D5-8458-CC45D4398C43}"
 EndProject
@@ -72,23 +72,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceLogger", "ServiceLog
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MultiLogger", "MultiLogger", "{5F2C6945-853D-4169-83A8-820F531BEE8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H-PF.ToolLibs.HesoLogger.Loggers.ServiceLogger", "H-PF.ToolLibs.HesoLogger.Loggers.ServiceLogger\H-PF.ToolLibs.HesoLogger.Loggers.ServiceLogger.csproj", "{B4D786A1-E7A3-476D-ADF1-CCDFCCB777EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "H-PF.ToolLibs.HesoLogger.Loggers.ServiceLogger", "H-PF.ToolLibs.HesoLogger.Loggers.ServiceLogger\H-PF.ToolLibs.HesoLogger.Loggers.ServiceLogger.csproj", "{B4D786A1-E7A3-476D-ADF1-CCDFCCB777EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H-PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger", "H-PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger\H-PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger.csproj", "{A568DB7E-12D6-481D-8332-51DA7DBF01D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "H-PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger", "H-PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger\H-PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger.csproj", "{A568DB7E-12D6-481D-8332-51DA7DBF01D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H-PF.ToolLibs.HesoLogger.Loggers.MultiLogger", "H-PF.ToolLibs.HesoLogger.Loggers.MultiLogger\H-PF.ToolLibs.HesoLogger.Loggers.MultiLogger.csproj", "{4CD2D651-2185-4A27-BD87-DE2E256D85D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "H-PF.ToolLibs.HesoLogger.Loggers.MultiLogger", "H-PF.ToolLibs.HesoLogger.Loggers.MultiLogger\H-PF.ToolLibs.HesoLogger.Loggers.MultiLogger.csproj", "{4CD2D651-2185-4A27-BD87-DE2E256D85D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H-PF.ToolLibs.HesoLogger.Loggers.FileLogger", "H-PF.ToolLibs.HesoLogger.Loggers.FileLogger\H-PF.ToolLibs.HesoLogger.Loggers.FileLogger.csproj", "{C28F1F31-1377-4166-AE56-0DB7C02BA522}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "H-PF.ToolLibs.HesoLogger.Loggers.FileLogger", "H-PF.ToolLibs.HesoLogger.Loggers.FileLogger\H-PF.ToolLibs.HesoLogger.Loggers.FileLogger.csproj", "{C28F1F31-1377-4166-AE56-0DB7C02BA522}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LogFormatters", "LogFormatters", "{625DC4E1-5B15-40A6-9737-CC2C40087612}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H-PF.ToolLibs.HesoLogger.LogFormaters.LogFormater", "H-PF.ToolLibs.HesoLogger.LogFormaters.LogFormater\H-PF.ToolLibs.HesoLogger.LogFormaters.LogFormater.csproj", "{821B49B7-E1B7-4331-8ED2-C39C70CA0827}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "H-PF.ToolLibs.HesoLogger.LogFormatters.LogFormatter", "H-PF.ToolLibs.HesoLogger.LogFormaters.LogFormater\H-PF.ToolLibs.HesoLogger.LogFormatters.LogFormatter.csproj", "{821B49B7-E1B7-4331-8ED2-C39C70CA0827}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HesoLogFormater", "HesoLogFormater", "{35B6B2B6-96ED-4350-B993-3CBD39019678}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H-PF.ToolLibs.HesoLogger.LogFormaters.HesoLogFormater", "H-PF.ToolLibs.HesoLogger.LogFormaters.HesoLogFormater\H-PF.ToolLibs.HesoLogger.LogFormaters.HesoLogFormater.csproj", "{38000441-D701-4274-8415-C7C21E8F8F25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "H-PF.ToolLibs.HesoLogger.LogFormatters.HesoLogFormatter", "H-PF.ToolLibs.HesoLogger.LogFormaters.HesoLogFormater\H-PF.ToolLibs.HesoLogger.LogFormatters.HesoLogFormatter.csproj", "{38000441-D701-4274-8415-C7C21E8F8F25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H-PF.ToolsLibs.HesoLogger.Domaine", "H-PF.ToolsLibs.HesoLogger.Domaine\H-PF.ToolsLibs.HesoLogger.Domaine.csproj", "{B3C13389-97C5-493C-8021-1605F2975321}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "H-PF.ToolLibs.HesoLogger.Domaine", "H-PF.ToolsLibs.HesoLogger.Domaine\H-PF.ToolLibs.HesoLogger.Domaine.csproj", "{B3C13389-97C5-493C-8021-1605F2975321}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H-PF.ToolLibs.HesoConfiguration", "H-PF.ToolLibs.HesoConfiguration\H-PF.ToolLibs.HesoConfiguration.csproj", "{DC20C162-D81F-40DE-A78D-2C6A2BD37C60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -136,6 +138,10 @@ Global
 		{B3C13389-97C5-493C-8021-1605F2975321}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3C13389-97C5-493C-8021-1605F2975321}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3C13389-97C5-493C-8021-1605F2975321}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC20C162-D81F-40DE-A78D-2C6A2BD37C60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC20C162-D81F-40DE-A78D-2C6A2BD37C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC20C162-D81F-40DE-A78D-2C6A2BD37C60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC20C162-D81F-40DE-A78D-2C6A2BD37C60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -178,6 +184,7 @@ Global
 		{35B6B2B6-96ED-4350-B993-3CBD39019678} = {625DC4E1-5B15-40A6-9737-CC2C40087612}
 		{38000441-D701-4274-8415-C7C21E8F8F25} = {35B6B2B6-96ED-4350-B993-3CBD39019678}
 		{B3C13389-97C5-493C-8021-1605F2975321} = {963ABBEA-68E2-4FF7-82A9-DB3C091DD309}
+		{DC20C162-D81F-40DE-A78D-2C6A2BD37C60} = {AC1A664C-5B68-440F-A037-98C71F6254F4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {05F33D9E-4A59-4443-A388-2B84A447FAB3}

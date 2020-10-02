@@ -1,10 +1,5 @@
 ﻿using H_PF.ToolLibs.HesoLogger.Configuration;
-using H_PF.ToolLibs.HesoLogger.LogFormatters;
-using Microsoft.Extensions.Options;
-using Microsoft.VisualBasic.FileIO;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace H_PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger
 {

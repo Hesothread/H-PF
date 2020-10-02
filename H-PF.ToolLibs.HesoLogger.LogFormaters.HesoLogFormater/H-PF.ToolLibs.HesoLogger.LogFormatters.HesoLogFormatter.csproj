@@ -5,4 +5,8 @@
     <RootNamespace>H_PF.ToolLibs.HesoLogger.LogFormaters.HesoLogFormater</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\H-PF.ToolLibs.HesoLogger.LogFormaters.LogFormater\H-PF.ToolLibs.HesoLogger.LogFormatters.LogFormatter.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,4 +1,4 @@
-﻿using H_PF.ToolLibs.HesoLogger.Loggers;
+﻿using H_PF.ToolLibs.HesoLogger.Domaine.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;

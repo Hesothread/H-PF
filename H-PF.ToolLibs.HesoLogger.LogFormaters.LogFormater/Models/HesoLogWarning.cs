@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace H_PF.ToolLibs.HesoLogger.Domaine.Models
+namespace H_PF.ToolLibs.HesoLogger.LogFormatters.Models
 {
     public class HesoLogWarning
     {

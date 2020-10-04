@@ -4,7 +4,7 @@ using System.Text;
 
 namespace H_PF.ToolLibs.HesoLogger.Domaine.Models
 {
-    public class HesoLogError
+    public class HesoLogInformation : AHesoLog
     {
     }
 }

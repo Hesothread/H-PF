@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>H_PF.Prototype.WebAppCRUD</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\H-PF.ToolLibs.HesoLogger\H-PF.ToolLibs.HesoLogger.csproj" />
+  </ItemGroup>
+
+
+</Project>

@@ -1,4 +1,4 @@
-﻿using H_PF.ToolLibs.HesoLogger.Loggers;
+﻿using H_PF.ToolLibs.HesoLogger.Domaine;
 using System;
 
 namespace H_PF.ToolLibs.HesoLogger
@@ -12,7 +12,7 @@ namespace H_PF.ToolLibs.HesoLogger
 
         public IHesoLogger HesoLogConsole()
         {
-
+            return null;
         }
     }
 }

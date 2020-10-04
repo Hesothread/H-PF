@@ -1,7 +1,4 @@
-﻿using H_PF.ToolLibs.HesoLogger.Loggers;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using H_PF.ToolLibs.HesoLogger.Domaine.Models;
 
 namespace H_PF.ToolLibs.HesoLogger.Configuration
 {

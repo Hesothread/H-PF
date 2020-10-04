@@ -5,4 +5,8 @@
     <RootNamespace>H_PF.ToolLibs.HesoLogger.Loggers.MultiLogger</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\H-PF.ToolLibs.HesoLogger.Logger\H-PF.ToolLibs.HesoLogger.Domaine.csproj" />
+  </ItemGroup>
+
 </Project>

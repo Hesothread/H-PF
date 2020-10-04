@@ -1,0 +1,19 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "HesoLoggerConfiguration": {
+    "LoggerName": "HesoConsoleLogger",
+    "LogFormatterName": "HesoLogFormatter"
+  },
+  "ConsoleLoggerConfiguration": {
+    "InformationLevel": "Level1",
+    "WarningLevel": "Level2",
+    "ErrorLevel": "Level3"
+  }
+}

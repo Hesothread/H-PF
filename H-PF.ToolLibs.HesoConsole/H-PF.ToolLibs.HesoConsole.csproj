@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>H_PF.ToolLibs.HesoLogger.LogFormaters.HesoLogFormater</RootNamespace>
+    <RootNamespace>H_PF.ToolLibs.HesoConsole</RootNamespace>
   </PropertyGroup>
 
 </Project>

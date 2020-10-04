@@ -1,4 +1,5 @@
 ﻿using H_PF.ToolLibs.HesoLogger.Domaine.Models;
+using H_PF.ToolLibs.HesoLogger.LogFormatters.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;

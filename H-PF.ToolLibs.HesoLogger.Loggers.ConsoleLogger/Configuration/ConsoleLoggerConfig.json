@@ -1,0 +1,7 @@
+{
+  "ConsoleLoggerConfiguration": {
+    "InformationLevel": "Level1",
+    "WarningLevel": "Level2",
+    "ErrorLevel": "Level3"
+  }
+}

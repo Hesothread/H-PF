@@ -9,19 +9,19 @@ using System.IO;
 
 namespace H_PF.ToolLibs.HesoLogger
 {
-    public static class HesoLoggerStartup
+    public static class HesoConsoleLoggerStartup
     {
         public static IConfiguration Configuration { get; private set; }
-        public static HesoLoggerConfiguration _config { get; private set; }
+        public static ConsoleLoggerConfiguration _config { get; private set; }
         public static void Startup(IConfiguration configuration)
         {
             Configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("HesoLoggerConfig.json")
-                .AddJsonFile($"HesoLoggerConfig.{Environment.GetEnvironmentVariable("HESO_ENVIRONMENT")}.json")
+                .AddJsonFile("ConsoleLoggerConfig.json")
+                .AddJsonFile($"ConsoleLoggerConfig.{Environment.GetEnvironmentVariable("HESO_ENVIRONMENT")}.json")
                 .Build();
-            _config = Configuration.GetSection("HesoLoggerConfiguration").Get<HesoLoggerConfiguration>();
-            configuration.Bind("HesoLoggerSettings", Configuration);
+            _config = Configuration.GetSection("HesoLoggerConfiguration").Get<ConsoleLoggerConfiguration>();
+            configuration.Bind("ConsoleLoggerSettings", Configuration);
         }
 
         public static void ConfigureServices(IServiceCollection services)

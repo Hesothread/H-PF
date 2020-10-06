@@ -1,6 +1,6 @@
 ﻿using H_PF.ToolLibs.HesoLogger.Domaine.Models;
 
-namespace H_PF.ToolLibs.HesoLogger.Configuration
+namespace H_PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger
 {
     public class ConsoleLoggerConfiguration
     {

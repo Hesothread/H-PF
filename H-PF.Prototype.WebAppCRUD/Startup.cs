@@ -46,7 +46,6 @@ namespace H_PF.Prototype.WebAppCRUD
             {
                 endpoints.MapControllers();
             });
-            HesoLoggerStartup.Configure(app, env);
         }
     }
 }

@@ -6,7 +6,7 @@ namespace H_PF.ToolLibs.HesoLogger.Domaine
 {
     public interface IHesoLogger
     {
-        public Type ModuleType { get; set; }
+        public string ModuleName { get; set; }
         void Information(HesoLogInformation logInfo);
         void Information(string message, [CallerMemberName] string title = "", ELogLevel level = ELogLevel.Level1);
         void InformationDisplayed(string message, [CallerMemberName] string title = "");

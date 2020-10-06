@@ -1,9 +1,8 @@
-﻿using H_PF.ToolLibs.HesoLogger.Configuration;
-using H_PF.ToolLibs.HesoLogger.Domaine;
+﻿using H_PF.ToolLibs.HesoLogger.Domaine;
+using H_PF.ToolLibs.HesoLogger.LogFormatters.HesoFormatter;
 using H_PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
 using System;
 using System.IO;
 
@@ -17,11 +16,11 @@ namespace H_PF.ToolLibs.HesoLogger
         {
             Configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("HesoLoggerConfig.json")
-                .AddJsonFile($"HesoLoggerConfig.{Environment.GetEnvironmentVariable("HESO_ENVIRONMENT")}.json")
+                .AddJsonFile("Configuration\\HesoLoggerConfig.json")
+                .AddJsonFile($"Configuration\\HesoLoggerConfig.{Environment.GetEnvironmentVariable("HESO_ENVIRONMENT")}.json")
                 .Build();
-            _config = Configuration.GetSection("HesoLoggerConfiguration").Get<HesoLoggerConfiguration>();
             configuration.Bind("HesoLoggerSettings", Configuration);
+            _config = Configuration.GetSection("HesoLoggerConfiguration").Get<HesoLoggerConfiguration>();
         }
 
         public static void ConfigureServices(IServiceCollection services)
@@ -29,9 +28,7 @@ namespace H_PF.ToolLibs.HesoLogger
             switch (_config.LogFormatterName)
             {
                 case "HesoConsoleLogger":
-                    services.AddOptions<ConsoleLoggerConfiguration>()
-                        .Bind(Configuration.GetSection("ConsoleLoggerConfiguration"))
-                        .ValidateDataAnnotations();
+                    services.Configure<HesoLoggerConfiguration>(Configuration.GetSection("ConsoleLoggerConfiguration"));
                     services.AddTransient<IHesoLogger, HesoConsoleLogger>();
                     break;
                 case "FileLogger":
@@ -42,16 +39,22 @@ namespace H_PF.ToolLibs.HesoLogger
                     break;
                 case "SerilogLogger":
                     break;
+                default:
+                    services.Configure<HesoLoggerConfiguration>(Configuration.GetSection("ConsoleLoggerConfiguration"));
+                    services.AddTransient<IHesoLogger, HesoConsoleLogger>();
+                    break;
             }
             switch (_config.LoggerName)
             {
-
+                case "HesoLogFormatter":
+                    services.Configure<HesoLogFormatterConfiguration>(Configuration.GetSection("HesoLogFormatterConfiguration"));
+                    services.AddTransient<ILogFormatter, HesoLogFormatter>();
+                    break;
+                default:
+                    services.Configure<HesoLogFormatterConfiguration>(Configuration.GetSection("HesoLogFormatterConfiguration"));
+                    services.AddTransient<ILogFormatter, HesoLogFormatter>();
+                    break;
             }
-        }
-
-        public static void Configure(IApplicationBuilder app, Microsoft.AspNetCore.Hosting.IWebHostEnvironment env)
-        {
-            throw new NotImplementedException();
         }
     }
 }

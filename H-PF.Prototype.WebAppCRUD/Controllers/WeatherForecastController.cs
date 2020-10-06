@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using H_PF.ToolLibs.HesoLogger.Domaine;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -18,9 +19,10 @@ namespace H_PF.Prototype.WebAppCRUD.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IHesoLogger lofer)
         {
             _logger = logger;
+            lofer.Error("pwet");
         }
 
         [HttpGet]

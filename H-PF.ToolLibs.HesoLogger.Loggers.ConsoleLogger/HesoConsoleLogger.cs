@@ -1,9 +1,7 @@
-﻿using H_PF.ToolLibs.HesoLogger.Configuration;
-using H_PF.ToolLibs.HesoLogger.Domaine;
+﻿using H_PF.ToolLibs.HesoLogger.Domaine;
 using H_PF.ToolLibs.HesoLogger.Domaine.Models;
 using Microsoft.Extensions.Options;
 using System;
-using System.Runtime.CompilerServices;
 
 namespace H_PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger
 {
@@ -11,10 +9,10 @@ namespace H_PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger
     {
         private readonly ConsoleLoggerConfiguration _config;
         private readonly ILogFormatter _logFormatter;
-        private Type _moduleType;
+        private string _moduleName;
 
-        public Type ModuleType { get => _moduleType; set => _moduleType = value; }
-        public HesoConsoleLogger(ILogFormatter logFormatter, IOptions<ConsoleLoggerConfiguration> config)
+        public string ModuleName { get => _moduleName; set => _moduleName = value; }
+        public HesoConsoleLogger(IOptions<ConsoleLoggerConfiguration> config, ILogFormatter logFormatter)
         {
             _config = config.Value;
             _logFormatter = logFormatter;
@@ -105,7 +103,7 @@ namespace H_PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger
                 LogLevel = _config.InformationLevel,
                 LogTime = DateTime.UtcNow,
                 Message = message,
-                ModuleName = _moduleType.Name,
+                ModuleName = _moduleName,
                 TitleName = title
             };
         }
@@ -116,7 +114,7 @@ namespace H_PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger
                 LogLevel = _config.InformationLevel,
                 LogTime = DateTime.UtcNow,
                 Message = message,
-                ModuleName = _moduleType.Name,
+                ModuleName = _moduleName,
                 TitleName = title,
                 Ex = ex
             };
@@ -128,7 +126,7 @@ namespace H_PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger
                 LogLevel = _config.InformationLevel,
                 LogTime = DateTime.UtcNow,
                 Message = message,
-                ModuleName = _moduleType.Name,
+                ModuleName = _moduleName,
                 TitleName = title,
                 Ex = ex
             };

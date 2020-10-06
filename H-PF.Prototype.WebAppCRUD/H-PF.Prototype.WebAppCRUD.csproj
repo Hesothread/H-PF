@@ -5,6 +5,10 @@
     <RootNamespace>H_PF.Prototype.WebAppCRUD</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\H-PF.ToolLibs.HesoLogger\H-PF.ToolLibs.HesoLogger.csproj" />
   </ItemGroup>

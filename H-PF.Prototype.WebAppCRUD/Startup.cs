@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using H_PF.ToolLibs.HesoLogger;
@@ -28,6 +29,7 @@ namespace H_PF.Prototype.WebAppCRUD
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            var test = Directory.GetCurrentDirectory();
             HesoLoggerStartup.ConfigureServices(services);
         }
 

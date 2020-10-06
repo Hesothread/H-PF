@@ -17,17 +17,27 @@ namespace H_PF.Prototype.WebAppCRUD.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly IHesoLogger _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IHesoLogger lofer)
+        public WeatherForecastController(IHesoLogger logger)
         {
             _logger = logger;
-            lofer.Error("pwet");
+            _logger.ModuleName = "WeatherForecast";
+            _logger.InformationDisplayed("InformationDisplayed");
+            _logger.InformationAdvanced("InformationAdvanced");
+            _logger.InformationHidden("InformationHidden");
+            _logger.WarningDisplayed("WarningDisplayed", "Boom", new Exception("Exception Warning"));
+            _logger.WarningAdvanced("WarningAdvanced", "Boom", new Exception("Exception Warning"));
+            _logger.WarningHidden("WarningHidden", "Boom", new Exception("Exception Warning"));
+            _logger.ErrorDisplayed("ErrorDisplayed", "KAKABoom", new Exception("Exception Error"));
+            _logger.ErrorAdvanced("ErrorAdvanced", "KAKABoom", new Exception("Exception Error"));
+            _logger.ErrorHidden("ErrorHidden", "KAKABoom", new Exception("Exception Error"));
         }
 
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            _logger.InformationDisplayed("InformationDisplayed");
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {

@@ -8,21 +8,21 @@ namespace H_PF.ToolLibs.HesoLogger.Domaine
     {
         public string ModuleName { get; set; }
         void Information(HesoLogInformation logInfo);
-        void Information(string message, [CallerMemberName] string title = "", ELogLevel level = ELogLevel.Level1);
+        void Information(string message, ELogLevel level = ELogLevel.Level1, [CallerMemberName] string title = "");
         void InformationDisplayed(string message, [CallerMemberName] string title = "");
         void InformationAdvanced(string message, [CallerMemberName] string title = "");
         void InformationHidden(string message, [CallerMemberName] string title = "");
 
         void Error(HesoLogError logError);
-        void Error(string message, [CallerMemberName] string title = "", Exception ex = null, ELogLevel level = ELogLevel.Level1);
-        void ErrorDisplayed(string message, [CallerMemberName] string title = "", Exception ex = null);
-        void ErrorAdvanced(string message, [CallerMemberName] string title = "", Exception ex = null);
-        void ErrorHidden(string message, [CallerMemberName] string title = "", Exception ex = null);
+        void Error(string message, Exception ex = null, ELogLevel level = ELogLevel.Level1, [CallerMemberName] string title = "");
+        void ErrorDisplayed(string message, Exception ex = null, [CallerMemberName] string title = "");
+        void ErrorAdvanced(string message, Exception ex = null, [CallerMemberName] string title = "");
+        void ErrorHidden(string message, Exception ex = null, [CallerMemberName] string title = "");
 
         void Warning(HesoLogWarning logWarning);
-        void Warning(string message, [CallerMemberName] string title = "", Exception ex = null, ELogLevel level = ELogLevel.Level1);
-        void WarningDisplayed(string message, [CallerMemberName] string title = "", Exception ex = null);
-        void WarningAdvanced(string message, [CallerMemberName] string title = "", Exception ex = null);
-        void WarningHidden(string message, [CallerMemberName] string title = "", Exception ex = null);
+        void Warning(string message, Exception ex = null, ELogLevel level = ELogLevel.Level1, [CallerMemberName] string title = "");
+        void WarningDisplayed(string message, Exception ex = null, [CallerMemberName] string title = "");
+        void WarningAdvanced(string message, Exception ex = null, [CallerMemberName] string title = "");
+        void WarningHidden(string message, Exception ex = null, [CallerMemberName] string title = "");
     }
 }

@@ -24,16 +24,16 @@ namespace H_PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger
             logInfo.LogLevel = _config.InformationLevel;
             WriteLine(logInfo);
         }
-        public void Information(string message, string title, ELogLevel level)
+        public void Information(string message,  ELogLevel level, string title)
         {
             if (_config.InformationLevel < level)
                 return;
             var log = BuildHesoLogInformation(message, title);
             Information(log);
         }
-        public void InformationDisplayed(string message, string title) => Information(message, title, ELogLevel.Level1);
-        public void InformationAdvanced(string message, string title) => Information(message, title, ELogLevel.Level2);
-        public void InformationHidden(string message, string title) => Information(message, title, ELogLevel.Level3);
+        public void InformationDisplayed(string message, string title) => Information(message, ELogLevel.Level1, title);
+        public void InformationAdvanced(string message, string title) => Information(message, ELogLevel.Level2, title);
+        public void InformationHidden(string message, string title) => Information(message, ELogLevel.Level3, title);
         #endregion
 
         #region Log Warning
@@ -42,16 +42,16 @@ namespace H_PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger
             logWarning.LogLevel = _config.WarningLevel;
             WriteLine(logWarning);
         }
-        public void Warning(string message, string title, Exception ex, ELogLevel level)
+        public void Warning(string message, Exception ex, ELogLevel level, string title)
         {
             if (_config.WarningLevel < level)
                 return;
             var log = BuildHesoLogWarning(message, title, ex);
             Warning(log);
         }
-        public void WarningAdvanced(string message, string title, Exception ex = null) => Warning(message, title, ex, ELogLevel.Level1);
-        public void WarningDisplayed(string message, string title, Exception ex = null) => Warning(message, title, ex, ELogLevel.Level2);
-        public void WarningHidden(string message, string title, Exception ex = null) => Warning(message, title, ex, ELogLevel.Level3);
+        public void WarningAdvanced(string message, Exception ex = null, string title = "") => Warning(message, ex, ELogLevel.Level1, title);
+        public void WarningDisplayed(string message, Exception ex = null, string title = "") => Warning(message, ex, ELogLevel.Level2, title);
+        public void WarningHidden(string message, Exception ex = null, string title = "") => Warning(message, ex, ELogLevel.Level3, title);
         #endregion
 
         #region Log Error
@@ -60,16 +60,16 @@ namespace H_PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger
             logError.LogLevel = _config.ErrorLevel;
             WriteLine(logError);
         }
-        public void Error(string message, string title, Exception ex, ELogLevel level)
+        public void Error(string message, Exception ex, ELogLevel level, string title)
         {
             if (_config.ErrorLevel < level)
                 return;
             var log = BuildHesoLogError(message, title, ex);
             Error(log);
         }
-        public void ErrorDisplayed(string message, string title, Exception ex = null) => Error(message, title, ex, ELogLevel.Level1);
-        public void ErrorAdvanced(string message, string title, Exception ex = null) => Error(message, title, ex, ELogLevel.Level2);
-        public void ErrorHidden(string message, string title, Exception ex = null) => Error(message, title, ex, ELogLevel.Level3);
+        public void ErrorDisplayed(string message, Exception ex = null, string title = "") => Error(message, ex, ELogLevel.Level1, title);
+        public void ErrorAdvanced(string message, Exception ex = null, string title = "") => Error(message, ex, ELogLevel.Level2, title);
+        public void ErrorHidden(string message, Exception ex = null, string title = "") => Error(message, ex, ELogLevel.Level3, title);
         #endregion
 
         #region Private

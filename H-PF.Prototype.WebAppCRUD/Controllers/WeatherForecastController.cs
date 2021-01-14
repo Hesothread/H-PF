@@ -26,12 +26,12 @@ namespace H_PF.Prototype.WebAppCRUD.Controllers
             _logger.InformationDisplayed("InformationDisplayed");
             _logger.InformationAdvanced("InformationAdvanced");
             _logger.InformationHidden("InformationHidden");
-            _logger.WarningDisplayed("WarningDisplayed", "Boom", new Exception("Exception Warning"));
-            _logger.WarningAdvanced("WarningAdvanced", "Boom", new Exception("Exception Warning"));
-            _logger.WarningHidden("WarningHidden", "Boom", new Exception("Exception Warning"));
-            _logger.ErrorDisplayed("ErrorDisplayed", "KAKABoom", new Exception("Exception Error"));
-            _logger.ErrorAdvanced("ErrorAdvanced", "KAKABoom", new Exception("Exception Error"));
-            _logger.ErrorHidden("ErrorHidden", "KAKABoom", new Exception("Exception Error"));
+            _logger.WarningDisplayed("WarningDisplayed", new Exception("Exception Warning"), "Boom");
+            _logger.WarningAdvanced("WarningAdvanced", new Exception("Exception Warning"), "Boom");
+            _logger.WarningHidden("WarningHidden", new Exception("Exception Warning"), "Boom");
+            _logger.ErrorDisplayed("ErrorDisplayed", new Exception("Exception Error"), "KAKABoom");
+            _logger.ErrorAdvanced("ErrorAdvanced", new Exception("Exception Error"), "KAKABoom");
+            _logger.ErrorHidden("ErrorHidden", new Exception("Exception Error"), "KAKABoom");
         }
 
         [HttpGet]

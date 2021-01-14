@@ -21,8 +21,7 @@ namespace H_PF.ToolLibs.HesoLogger
             HesoEnv = Environment.GetEnvironmentVariable("HESO_ENVIRONMENT");
 
             var ConfigurationBuilder = new ConfigurationBuilder();
-            var path = $"{configuration.GetValue<string>(WebHostDefaults.ContentRootKey)}/Configuration/HesoLoggerConfig.json";
-            if (File.Exists(path))
+            if (File.Exists("Configuration\\HesoLoggerConfig.json"))
             {
                 ConfigurationBuilder.AddJsonFile("Configuration\\HesoLoggerConfig.json");
                 if (HesoEnv != null && File.Exists($"Configuration\\HesoLoggerConfig.{HesoEnv}.json"))

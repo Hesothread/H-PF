@@ -19,11 +19,10 @@
   <ItemGroup>
     <ProjectReference Include="..\H-PF.ToolLibs.HesoLogger.LogFormaters.HesoLogFormater\H-PF.ToolLibs.HesoLogger.LogFormatters.HesoLogFormatter.csproj" />
     <ProjectReference Include="..\H-PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger\H-PF.ToolLibs.HesoLogger.Loggers.ConsoleLogger.csproj" />
-    <ProjectReference Include="..\H-PF.ToolLibs.HesoLogger.Logger\H-PF.ToolLibs.HesoLogger.Domaine.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Configuration\HesoLoggerConfig.json">
+    <None Update="HesoLoggerManager\Builder\HesoLoggerConfig.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

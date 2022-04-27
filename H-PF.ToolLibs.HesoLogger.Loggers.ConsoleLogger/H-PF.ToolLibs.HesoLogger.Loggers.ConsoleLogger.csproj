@@ -12,8 +12,4 @@
     <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.8" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\H-PF.ToolLibs.HesoLogger.Logger\H-PF.ToolLibs.HesoLogger.Domaine.csproj" />
-  </ItemGroup>
-
 </Project>

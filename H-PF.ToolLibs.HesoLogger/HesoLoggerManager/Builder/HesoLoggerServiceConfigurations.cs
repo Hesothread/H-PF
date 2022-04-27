@@ -11,11 +11,26 @@ using System.Runtime.InteropServices;
 
 namespace H_PF.ToolLibs.HesoLogger
 {
-    public static class HesoLoggerStartup
+    public static class HesoLoggerServiceConfigurations
     {
-        public static IConfiguration Configuration { get; private set; }
         public static string HesoEnv { get; private set; }
-        public static HesoLoggerConfiguration _config { get; private set; }
+
+        public static HesoLoggerConfiguration Config = null;
+        public static HesoLoggerConfiguration _config
+        {
+            get
+            {
+                if (Config == null)
+                    Config = GetConfiguration();
+                return Config;
+            }
+        }
+
+        private static HesoLoggerConfiguration GetConfiguration()
+        {
+            throw new NotImplementedException();
+        }
+
         public static void Startup(IConfiguration configuration)
         {
             HesoEnv = Environment.GetEnvironmentVariable("HESO_ENVIRONMENT");
@@ -26,14 +41,14 @@ namespace H_PF.ToolLibs.HesoLogger
                 ConfigurationBuilder.AddJsonFile("Configuration\\HesoLoggerConfig.json");
                 if (HesoEnv != null && File.Exists($"Configuration\\HesoLoggerConfig.{HesoEnv}.json"))
                     ConfigurationBuilder.AddJsonFile($"Configuration\\HesoLoggerConfig.{HesoEnv}.json");
-                Configuration = ConfigurationBuilder.Build();
+                configuration. = ConfigurationBuilder.Build();
             }
             else
                 Configuration = configuration;
             _config = Configuration.GetSection("HesoLoggerConfiguration").Get<HesoLoggerConfiguration>();
         }
 
-        public static void ConfigureServices(IServiceCollection services)
+        public static void AddHesoLogger(IServiceCollection services, ILogFormatter logFormatter = null)
         {
             switch (_config.LoggerName)
             {
@@ -43,11 +58,7 @@ namespace H_PF.ToolLibs.HesoLogger
                     break;
                 case "FileLogger":
                     break;
-                case "MultiLogger":
-                    break;
                 case "ServiceLogger":
-                    break;
-                case "SerilogLogger":
                     break;
                 default:
                     services.Configure<ConsoleLoggerConfiguration>(Configuration.GetSection("ConsoleLoggerConfiguration"));

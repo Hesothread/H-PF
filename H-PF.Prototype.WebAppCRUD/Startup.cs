@@ -20,7 +20,7 @@ namespace H_PF.Prototype.WebAppCRUD
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            HesoLoggerStartup.Startup(Configuration);
+            HesoLoggerServiceConfigurations.Startup(Configuration);
         }
 
         public IConfiguration Configuration { get; }
@@ -30,7 +30,7 @@ namespace H_PF.Prototype.WebAppCRUD
         {
             services.AddControllers();
             var test = Directory.GetCurrentDirectory();
-            HesoLoggerStartup.ConfigureServices(services);
+            HesoLoggerServiceConfigurations.ConfigureServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

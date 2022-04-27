@@ -7,5 +7,6 @@ namespace H_PF.ToolLibs.HesoLogger.Domaine
         string FormatInformation(HesoLogInformation message);
         string FormatWarning(HesoLogWarning message);
         string FormatError(HesoLogError message);
+        string FormatDebug(HesoLogError message);
     }
 }

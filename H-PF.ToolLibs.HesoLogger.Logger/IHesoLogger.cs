@@ -1,28 +1,23 @@
 ﻿using H_PF.ToolLibs.HesoLogger.Domaine.Models;
 using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 namespace H_PF.ToolLibs.HesoLogger.Domaine
 {
-    public interface IHesoLogger
+    public interface IHesoLogger : ILogger
     {
         public string ModuleName { get; set; }
         void Information(HesoLogInformation logInfo);
-        void Information(string message, ELogLevel level = ELogLevel.Level1, [CallerMemberName] string title = "");
-        void InformationDisplayed(string message, [CallerMemberName] string title = "");
-        void InformationAdvanced(string message, [CallerMemberName] string title = "");
-        void InformationHidden(string message, [CallerMemberName] string title = "");
+        void Information(string message, List<string> groups, [Caller] [CallerMemberName] string title = "");
 
         void Error(HesoLogError logError);
-        void Error(string message, Exception ex = null, ELogLevel level = ELogLevel.Level1, [CallerMemberName] string title = "");
-        void ErrorDisplayed(string message, Exception ex = null, [CallerMemberName] string title = "");
-        void ErrorAdvanced(string message, Exception ex = null, [CallerMemberName] string title = "");
-        void ErrorHidden(string message, Exception ex = null, [CallerMemberName] string title = "");
+        void Error(string message, List<string> groups, Exception ex = null, [CallerMemberName] string title = "");
 
         void Warning(HesoLogWarning logWarning);
-        void Warning(string message, Exception ex = null, ELogLevel level = ELogLevel.Level1, [CallerMemberName] string title = "");
-        void WarningDisplayed(string message, Exception ex = null, [CallerMemberName] string title = "");
-        void WarningAdvanced(string message, Exception ex = null, [CallerMemberName] string title = "");
-        void WarningHidden(string message, Exception ex = null, [CallerMemberName] string title = "");
+        void Warning(string message, List<string> groups, Exception ex = null, [CallerMemberName] string title = "");
+
+        void Debug(HesoLogWarning logWarning);
+        void Debug(string message, List<string> groups, Exception ex = null, [CallerMemberName] string title = "");
     }
 }
